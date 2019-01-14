@@ -8,7 +8,7 @@ int main() {
     mpz_init (j);
     mpz_init (k);
     mpz_sqrtrem (j, k, i);
-    if (mpz_get_si (j) != 4 || mpz_get_si (k) != 1) abort();
+    if (mpz_get_si (j) != 5 || mpz_get_si (k) != 1) abort();
     printf("%s\n", "Works as expected");
     return 0;
 }
