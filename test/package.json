@@ -17,7 +17,7 @@
       "override": {
         "buildsInSource": true,
         "build": [
-          "./configure --prefix=#{self.install}",
+          "./configure --prefix=#{self.install} --enable-pic --enable-cxx",
           "make"
         ],
         "install": [
