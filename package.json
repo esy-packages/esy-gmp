@@ -33,10 +33,6 @@
       "CPATH": {
         "scope": "global",
         "val": "#{self.install / 'include'}:$CPATH"
-      },
-      "PKG_CONFIG_PATH": {
-        "val": "#{self.lib / 'pkgconfig' : $PKG_CONFIG_PATH}",
-        "scope": "global"
       }
     }
   }
