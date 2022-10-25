@@ -5,12 +5,8 @@
   "source": "https://gmplib.org/download/gmp/gmp-6.2.1.tar.xz#0578d48607ec0e272177d175fd1807c30b00fdf2",
   "override": {
     "buildsInSource": true,
-    "buildEnv": {
-      "PATH": "#{os == 'windows' ? '/usr/x86_64-w64-mingw32/sys-root/mingw/bin': '' }:$PATH"
-    },
     "build": [
-      "find ./ -exec touch -t 200905010101 {} +",
-      "./configure --enable-fat --enable-cxx --prefix=#{self.install} #{os == 'windows' ? '--host x86_64-w64-mingw32' : ''} --with-pic",
+      "bash ./build.sh",
       "make -j4"
     ],
     "install": [
