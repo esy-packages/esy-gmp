@@ -6,7 +6,7 @@
   "override": {
     "buildsInSource": true,
     "build": [
-      "bash ./build.sh",
+      "bash ./build.sh ${os}",
       "make -j4"
     ],
     "install": [
