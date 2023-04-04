@@ -6,8 +6,7 @@
   "override": {
     "buildsInSource": true,
     "build": [
-      "find ./ -exec touch -t 200905010101 {} +",
-      "./configure --enable-fat --enable-cxx --prefix=#{self.install} #{os == 'windows' ? '--host x86_64-w64-mingw32' : ''} --with-pic",
+      "bash ./build.sh #{os}",
       "make -j4"
     ],
     "install": [
